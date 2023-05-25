@@ -28,3 +28,11 @@ Q, Z – 10 очков.
 ноутбук
     12
 '''
+
+d = {}
+word = [i for i in input("введи слово > ")]
+length = len(word)
+count = 0
+for i in word:
+    count += d[word]
+print(count)

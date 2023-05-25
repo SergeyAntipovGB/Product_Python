@@ -20,6 +20,7 @@ print(a)
 x = int(input('введи любое целое число X = '))
 count = -100
 for i in a:
-	if x == i or (x > i and (count > x and count - x > x - i or x > i > count)) or (x < i and (count < x and x - count > i - x or count > i > x)):
+	if x == i or (x > i and (count > x and count - x > x -
+			  i or x > i > count)) or (x < i and (count < x and x - count > i - x or count > i > x)):
 		count = i
 print(f'самое близкое значение = {count}')
