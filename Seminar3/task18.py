@@ -17,20 +17,9 @@ from random import randint
 n = int(input('введи количество элементов массива N = '))
 a = [randint(0, 11) for i in range(n)]
 print(a)
-x = int(input('введи любое целое число X > '))
-count = -1
+x = int(input('введи любое целое число X = '))
+count = -100
 for i in a:
-    if x == i:
-        count = i
-    elif x > i:
-        if count > x and count - x > x - i:
-            count = i
-        elif x > i > count:
-            count = i
-    else:# x < i
-        if count < x and x - count > i - x:
-            count = i
-        elif count > i > x:
-            count = i
-    print(f'i = {i} | count = {count}')
+	if x == i or (x > i and (count > x and count - x > x - i or x > i > count)) or (x < i and (count < x and x - count > i - x or count > i > x)):
+		count = i
 print(f'самое близкое значение = {count}')
